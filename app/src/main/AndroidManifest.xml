@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.radenaksara">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="Raden Aksara"
+        android:roundIcon="@mipmap/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".TerjemahAks2Activity"
+            android:label="Terjemah Aksara"
+            android:parentActivityName=".DolananActivity"></activity>
+        <activity android:name=".Tebak2Activity"
+            android:label="Tebak Aksara"
+            android:parentActivityName=".DolananActivity"/>
+        <activity
+            android:name=".EditProfilActivity"
+            android:label="Edit Profil"
+            android:parentActivityName=".ProfilActivity" />
+        <activity
+            android:name=".ProfilActivity"
+            android:label="Profil"
+            android:parentActivityName=".MenuActivity" />
+        <activity
+            android:name=".TerjemahAksActivity"
+            android:label="Terjemah Aksara"
+            android:parentActivityName=".DolananActivity" />
+        <activity
+            android:name=".TebakActivity"
+            android:label="Tebak Aksara"
+            android:parentActivityName=".DolananActivity" />
+        <activity
+            android:name=".AsalUrunActivity"
+            android:label="Asal Urun Aksara Jawa"
+            android:parentActivityName=".MenuActivity" />
+        <activity
+            android:name=".DaftarActivity"
+            android:label="Daftar" />
+        <activity
+            android:name=".MasukActivity"
+            android:label="Masuk" />
+        <activity
+            android:name=".DolananActivity"
+            android:label="Dolanan"
+            android:parentActivityName=".MenuActivity" />
+        <activity
+            android:name=".MateriActivity"
+            android:label="Materi Aksara"
+            android:parentActivityName=".MenuActivity" />
+        <activity
+            android:name=".Sandhangan2Activity"
+            android:label="Aksara Sandhangan"
+            android:parentActivityName=".Sandhangan1Activity" />
+        <activity
+            android:name=".Sandhangan1Activity"
+            android:label="Aksara Sandhangan"
+            android:parentActivityName=".MateriActivity" />
+        <activity
+            android:name=".SwaraActivity"
+            android:label="Aksara Swara"
+            android:parentActivityName=".MateriActivity" />
+        <activity
+            android:name=".PsMurdaActivity"
+            android:label="Aksara Pasangan Murda"
+            android:parentActivityName=".MateriActivity" />
+        <activity
+            android:name=".MurdaActivity"
+            android:label="Aksara Murda"
+            android:parentActivityName=".MateriActivity" />
+        <activity
+            android:name=".WilanganActivity"
+            android:label="Aksara Wilangan"
+            android:parentActivityName=".MateriActivity" />
+        <activity
+            android:name=".PasanganActivity"
+            android:label="Aksara Pasangan Carakan"
+            android:parentActivityName=".MateriActivity" />
+        <activity
+            android:name=".CarakanActivity"
+            android:label="Aksara Carakan"
+            android:parentActivityName=".MateriActivity" />
+        <activity
+            android:name=".MenuActivity"
+            android:label="Menu Utama" />
+        <activity
+            android:name=".MainActivity"
+            android:label="Raden Aksara">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

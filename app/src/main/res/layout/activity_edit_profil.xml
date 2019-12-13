@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0E8C3"
+    tools:context=".EditProfilActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/raden_sdn1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="Raden Aksara"
+                android:textSize="24sp"
+                android:textColor="@color/coklat"
+                />
+
+            <ImageView
+                android:id="@+id/logo_sdn1"
+                android:layout_width="50dp"
+                android:layout_height="75dp"
+                android:layout_toRightOf="@+id/raden_sdn1"
+                android:src="@drawable/logo_atas" />
+
+            <ImageView
+                android:id="@+id/gambarprofil"
+                android:layout_below="@id/logo_sdn1"
+                android:layout_width="80dp"
+                android:layout_height="150dp"
+                android:src="@drawable/profil"
+                />
+
+            <TextView
+                android:id="@+id/ubah"
+                android:layout_below="@id/logo_sdn1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/gambarprofil"
+                android:layout_marginTop="70dp"
+                android:text="Ubah Foto Profil"
+                android:textColor="#9D5A2F"
+                android:textSize="20sp"
+                />
+
+            <TextView
+                android:id="@+id/namapengguna"
+                android:layout_below="@id/ubah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="#9D5A2F"
+                android:layout_marginTop="@android:dimen/notification_large_icon_width"
+                android:text="Ubah Nama Pengguna"
+                android:layout_marginLeft="10dp"/>
+
+            <EditText
+                android:id="@+id/editnama"
+                android:layout_below="@id/namapengguna"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                />
+
+            <TextView
+                android:id="@+id/ubahemail1"
+                android:layout_below="@+id/editnama"
+                android:textColor="#9D5A2F"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_marginTop="20dp"
+                android:text="Ubah Email"
+                android:layout_marginLeft="10dp"/>
+
+            <EditText
+                android:id="@+id/ubahemail2"
+                android:layout_below="@id/ubahemail1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:inputType="textEmailAddress"
+                />
+
+            <TextView
+                android:id="@+id/ubahkatasandi1"
+                android:layout_below="@+id/ubahemail2"
+                android:textColor="#9D5A2F"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_marginTop="20dp"
+                android:text="Kata Sandi"
+                android:layout_marginLeft="10dp"/>
+
+            <EditText
+                android:id="@+id/ubahkatasandi2"
+                android:layout_below="@id/ubahkatasandi1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:inputType="textPassword"
+                />
+
+            <TextView
+                android:id="@+id/konfirmasi"
+                android:layout_below="@+id/ubahkatasandi2"
+                android:textColor="#9D5A2F"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_marginTop="20dp"
+                android:text="Konfirmasi Kata Sandi"
+                android:layout_marginLeft="10dp"/>
+
+            <EditText
+                android:id="@+id/konfirmasi2"
+                android:layout_below="@id/konfirmasi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:inputType="textPassword"
+                />
+
+            <Button
+                android:id="@+id/selesai"
+                android:layout_below="@+id/konfirmasi2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/button1"
+                android:text="Selesai"
+                />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>
