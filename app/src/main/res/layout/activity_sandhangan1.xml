@@ -15,19 +15,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/aksara_sandhangan"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="20dp"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:textColor="@color/coklat"
                 android:layout_marginLeft="10dp"
                 />
 
-            <ImageView
-                android:id="@+id/image_sdn1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_below="@+id/materi_sdn1"
-                android:src="@drawable/sandhangan1" />
+    <ImageView
+        android:id="@+id/image_sdn1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/sandhangan1" />
 
 
             <ImageView

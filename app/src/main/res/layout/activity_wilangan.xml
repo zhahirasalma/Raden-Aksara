@@ -15,18 +15,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/aksara_wilangan"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="20dp"
                 android:textSize="16sp"
                 android:textColor="@color/coklat"
                 android:layout_marginLeft="10dp"
                 android:textStyle="bold"
                 />
 
-            <ImageView
-                android:id="@+id/image_wilangan"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_below="@+id/materi_wilangan"
-                android:src="@drawable/wilangan" />
+    <ImageView
+        android:id="@+id/image_wilangan"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/wilangan" />
 
         </RelativeLayout>

@@ -24,8 +24,8 @@
                     android:id="@+id/iv_auaj"
                     android:layout_width="240dp"
                     android:layout_height="160dp"
-                    android:layout_marginTop="21dp"
-                    android:padding="12sp"
+                    android:layout_marginTop="20dp"
+                    android:padding="12dp"
                     android:scaleType="fitXY"
                     android:layout_centerHorizontal="true"
                     android:src="@drawable/wayang"/>
@@ -47,7 +47,7 @@
                     android:layout_height="160dp"
                     android:layout_below="@id/tv_auaj"
                     android:layout_centerHorizontal="true"
-                    android:padding="12sp"
+                    android:padding="12dp"
                     android:scaleType="fitXY"
                     android:src="@drawable/aksara_carakan" />
 
@@ -68,7 +68,7 @@
                     android:layout_height="160dp"
                     android:layout_below="@id/tv_materi"
                     android:layout_centerHorizontal="true"
-                    android:padding="12sp"
+                    android:padding="12dp"
                     android:scaleType="fitXY"
                     android:src="@drawable/dolanan"
                     />
@@ -90,7 +90,7 @@
                     android:layout_height="160dp"
                     android:layout_below="@id/tv_dolanan"
                     android:layout_centerHorizontal="true"
-                    android:padding="12sp"
+                    android:padding="12dp"
                     android:scaleType="fitXY"
                     android:src="@drawable/koin" />
 

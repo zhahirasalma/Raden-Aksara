@@ -10,25 +10,22 @@
     android:gravity="center"
     >
 
-
-
             <TextView
                 android:id="@+id/materi_murda"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/aksara_murda"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="20dp"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:textColor="@color/coklat"
                 android:layout_marginLeft="10dp"
                 />
 
-            <ImageView
-                android:id="@+id/image_murda"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_below="@id/materi_murda"
-                android:src="@drawable/murda" />
+    <ImageView
+        android:id="@+id/image_murda"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/murda" />
 
         </RelativeLayout>
