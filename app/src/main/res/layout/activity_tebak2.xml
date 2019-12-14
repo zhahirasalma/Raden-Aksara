@@ -11,13 +11,26 @@
     <TextView
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:textStyle="bold"
         android:textColor="#9f5b2e"
-        android:text="Poin: x"
-        android:layout_marginLeft="10dp"
+        android:text="Poin: 0"
         android:layout_marginTop="30dp"
-        android:id="@+id/tv1"/>
+        android:layout_marginLeft="10dp"
+        android:id="@+id/poin_count"/>
+
+    <TextView
+        android:id="@+id/countdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="00:15"
+        android:textStyle="bold"
+        android:textColor="#9f5b2e"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="30sp"
+        android:layout_marginRight="10dp"
+        />
 
     <ImageView
         android:padding="3dp"
@@ -25,7 +38,7 @@
         android:layout_width="260dp"
         android:id="@+id/iv_ya"
         android:scaleType="fitXY"
-        android:layout_below="@id/tv1"
+        android:layout_below="@id/countdown"
         android:src="@drawable/ya"
         android:layout_centerHorizontal="true"/>
 
@@ -36,7 +49,7 @@
         android:textStyle="bold"
         android:textColor="#a35638"
         android:layout_marginLeft="10dp"
-        android:text="1. Aksara diatas adalah..."
+        android:text="2. Aksara diatas adalah..."
         android:id="@+id/tv2"
         android:layout_below="@id/iv_ya"/>
 
@@ -57,7 +70,6 @@
             android:textColor="#a35638"
             android:text="Na"
             android:id="@+id/r1a"
-            android:onClick="onRadioButtonClicked"
             android:checked="true"/>
 
         <RadioButton
@@ -67,8 +79,7 @@
             android:textStyle="bold"
             android:textColor="#a35638"
             android:text="Ma"
-            android:id="@+id/r2a"
-            android:onClick="onRadioButtonClicked"/>
+            android:id="@+id/r2a" />
 
         <RadioButton
             android:layout_height="wrap_content"
@@ -77,8 +88,7 @@
             android:textStyle="bold"
             android:textColor="#a35638"
             android:text="Ga"
-            android:id="@+id/r3a"
-            android:onClick="onRadioButtonClicked"/>
+            android:id="@+id/r3a" />
 
         <RadioButton
             android:layout_height="wrap_content"
@@ -87,8 +97,7 @@
             android:textStyle="bold"
             android:textColor="#a35638"
             android:text="Ya"
-            android:id="@+id/r4a"
-            android:onClick="onRadioButtonClicked"/>
+            android:id="@+id/r4a" />
 
     </RadioGroup>
 

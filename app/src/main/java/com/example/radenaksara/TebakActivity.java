@@ -57,25 +57,25 @@ public class TebakActivity extends AppCompatActivity {
         timeLeftInMillis=COUNTDOWN_IN_MILLIS;
         startCountDown();
 
-        gambar=new ArrayList<>();
-        gambar.add(R.drawable.tebak_ca);
-        gambar.add(R.drawable.ya);
-
-        soal=new ArrayList<>();
-        soal.add("1. Aksara diatas adalah..");
+//        gambar=new ArrayList<>();
+//        gambar.add(R.drawable.tebak_ca);
+//        gambar.add(R.drawable.ya);
+//
+//        soal=new ArrayList<>();
+//        soal.add("1. Aksara diatas adalah..");
 
 
         soal1=findViewById(R.id.iv_ca);
-        Glide.with(this).load(gambar.get(0)).into(soal1);
+        Glide.with(this).load(R.drawable.tebak_ca).into(soal1);
 
-        descSoal=findViewById(R.id.tv2);
-        descSoal.setText(String.valueOf(soal));
+//        descSoal=findViewById(R.id.tv2);
+//        descSoal.setText(String.valueOf(soal));
 
         sr1=findViewById(R.id.r1);
         sr1.setText(""+jawaban[0][0]);
 
         SharedPreferences preferences=PreferenceManager.getDefaultSharedPreferences(this);
-        Long poin=preferences.getLong("Poin", 0 );
+        poin=preferences.getLong("Poin", 0 );
 
     }
 
@@ -119,12 +119,12 @@ public class TebakActivity extends AppCompatActivity {
         String selectedtext=(String)radioButton.getText();
 
         if (selectedtext.equals(jawaban[0][2])){
-
+            countDownTimer.cancel();
             Intent intent=new Intent(this, Tebak2Activity.class);
             startActivity(intent);
-
         }else{
             showEditDialog();
+            startCountDown();
         }
     }
 
