@@ -20,5 +20,11 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="aksara_carakan">Aksara carakan adalah aksara paling dasar yang digunakan untuk menulis kata kata.</string>
+    <string name="aksara_murda">Aksara murda adalah delapan huruf khusus dalam aksara jawa yang berfungsi sama seperti huruf kapital. Biasanya digunakan untuk menulis nama orang penting maupun nama suatu daerah.</string>
+    <string name="aksara_pasangan_carakan">Aksara pasangan adalah bentuk khusus dari aksara jawa untuk mematikan atau menghilangkan vokal dari aksara sebelumnya. Aksara pasangan dipakai untuk menuliskan suku kata yang tidak terdapat vokal.</string>
+    <string name="aksara_pasangan_murda">Aksara pasangan sama seperti aksara pasangan carakan, namun aksara pasangan murda dikhususkan untuk huruf huruf murda (kapital).</string>
+    <string name="aksara_sandhangan">Aksara sandhangan merupakan coretan yang digunakan untuk memberi pelafalan vokal dan akhiran tertentu terhadap aksara Carakan. Penulisan sandangan pada prinsipnya dari kiri ke kanan. Namun posisi penulisan setiap sandangan berbeda-beda.</string>
+    <string name="aksara_swara">Aksara swara dalam penulisan aksara jawa digunakan untuk menuliskan aksara vokal yang menjadi suku kata, terutama yang berasal dari bahasa asing, untuk mempertegas pelafalannya.</string>
+    <string name="aksara_wilangan">Aksara wilangan atau bilangan adalah aksara yang digunakan untuk menuliskan angka dalam aksara jawa.</string>
 
 </resources>

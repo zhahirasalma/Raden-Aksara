@@ -86,7 +86,7 @@
             android:parentActivityName=".MateriActivity" />
         <activity
             android:name=".MenuActivity"
-            android:label="Menu Utama" />
+            android:label="Menu" />
         <activity
             android:name=".MainActivity"
             android:label="Raden Aksara">

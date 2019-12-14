@@ -9,15 +9,12 @@
     tools:context=".CarakanActivity"
     android:gravity="center"
     >
-
-
-
             <TextView
                 android:id="@+id/materi_carakan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/aksara_carakan"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="40dp"
                 android:textSize="16sp"
                 android:textColor="@color/coklat"
                 android:layout_marginLeft="10dp"
@@ -28,7 +25,7 @@
                 android:id="@+id/image_carakan"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_centerHorizontal="true"
+                android:layout_below="@id/materi_carakan"
                 android:src="@drawable/carakan" />
 
         </RelativeLayout>

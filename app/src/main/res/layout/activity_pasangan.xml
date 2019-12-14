@@ -13,9 +13,9 @@
                 android:id="@+id/materi_carakan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Aksara Pasangan Carakan"
-                android:layout_marginTop="20dp"
-                android:textSize="24sp"
+                android:text="@string/aksara_pasangan_carakan"
+                android:layout_marginTop="40dp"
+                android:textSize="16sp"
                 android:textStyle="bold"
                 android:textColor="@color/coklat"
                 android:layout_marginLeft="10dp"
@@ -25,7 +25,7 @@
                 android:id="@+id/image_pasangan"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_below="@+id/materi_carakan"
+                android:layout_below="@id/materi_carakan"
                 android:src="@drawable/pasangan" />
 
         </RelativeLayout>
