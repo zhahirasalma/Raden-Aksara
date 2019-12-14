@@ -9,29 +9,12 @@
     tools:context=".PsMurdaActivity"
     >
 
-            <TextView
-                android:id="@+id/raden_psmurda"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="20dp"
-                android:text="Raden Aksara"
-                android:textSize="24sp"
-                android:textColor="@color/coklat"/>
-
-            <ImageView
-                android:id="@+id/logo_psmurda"
-                android:layout_width="50dp"
-                android:layout_height="75dp"
-                android:layout_toRightOf="@+id/raden_psmurda"
-                android:src="@drawable/logo_atas" />
 
             <TextView
                 android:id="@+id/materi_psmurda"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Aksara Pasangan Murda"
-                android:layout_below="@+id/raden_psmurda"
                 android:layout_marginTop="20dp"
                 android:textSize="24sp"
                 android:textStyle="bold"

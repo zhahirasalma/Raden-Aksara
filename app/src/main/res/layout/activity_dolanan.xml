@@ -16,30 +16,12 @@
                 tools:context=".MainActivity">
 
                 <TextView
-                    android:id="@+id/raden_sdn2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="20dp"
-                    android:text="Raden Aksara"
-                    android:textSize="24sp"
-                    android:textColor="@color/coklat"/>
-
-                <ImageView
-                    android:id="@+id/logo_sdn2"
-                    android:layout_width="50dp"
-                    android:layout_height="75dp"
-                    android:layout_toRightOf="@+id/raden_sdn2"
-                    android:src="@drawable/logo_atas" />
-
-                <TextView
                     android:id="@+id/tv1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="DOLANAN"
                     android:textColor="#9f5b2e"
-                    android:layout_below="@+id/raden_sdn2"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="50dp"
                     android:textStyle="bold"
                     android:textSize="20dp"
                     android:padding="10dp"

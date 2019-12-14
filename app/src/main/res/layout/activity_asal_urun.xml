@@ -15,36 +15,6 @@
         android:background="#f0e8c3"
         >
 
-        <TextView
-            android:id="@+id/raden_sdn2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"
-            android:text="Raden Aksara"
-            android:textSize="24sp"
-            android:textColor="@color/coklat"/>
-
-        <ImageView
-            android:id="@+id/logo_sdn2"
-            android:layout_width="50dp"
-            android:layout_height="75dp"
-            android:layout_toRightOf="@+id/raden_sdn2"
-            android:src="@drawable/logo_atas" />
-
-        <TextView
-            android:id="@+id/tv1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ASAL URUN"
-            android:textColor="#9f5b2e"
-            android:layout_below="@+id/raden_sdn2"
-            android:layout_marginTop="10dp"
-            android:textStyle="bold"
-            android:textSize="20dp"
-            android:padding="10dp"
-            android:layout_alignParentRight="true"/>
-
         <ImageView
             android:id="@+id/gambar2"
             android:layout_below="@+id/tv1"
@@ -59,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/gambar2"
             android:text="@string/asal_urun1"
-            android:textColor="#000000"
+            android:textColor="#9f5b2e"
             />
         <TextView
             android:id="@+id/teks2"
@@ -67,44 +37,58 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/asal_urun2"
-            android:textColor="#000000"/>
+            android:textColor="#9f5b2e"/>
+        <ImageView
+            android:id="@+id/image_asalusul"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:layout_below="@id/teks2"
+            android:src="@drawable/asal_usul2"
+            android:layout_centerHorizontal="true"
+            />
         <TextView
             android:id="@+id/teks3"
-            android:layout_below="@+id/teks2"
+            android:layout_below="@+id/image_asalusul"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/asal_urun3"
-            android:textColor="#000000"/>
+            android:text="@string/asal_urun6"
+            android:textColor="#9f5b2e"
+            android:textStyle="bold"
+            android:gravity="center" />
         <TextView
             android:id="@+id/teks4"
             android:layout_below="@+id/teks3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/asal_urun4"
-            android:textColor="#000000"/>
+            android:text="@string/asal_urun7"
+            android:textColor="#9f5b2e"
+            android:textStyle="bold"
+            android:gravity="center"/>
         <TextView
             android:id="@+id/teks5"
             android:layout_below="@+id/teks4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/asal_urun5"
-            android:textColor="#000000"/>
+            android:text="@string/asal_urun8"
+            android:textColor="#9f5b2e"
+            android:textStyle="bold"
+            android:gravity="center"/>
         <TextView
             android:id="@+id/teks6"
             android:layout_below="@+id/teks5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/asal_urun6"
-            android:textColor="#000000"
+            android:text="@string/asal_urun9"
+            android:textColor="#9f5b2e"
             android:textStyle="bold"
-            android:gravity="center" />
+            android:gravity="center"/>
         <TextView
             android:id="@+id/teks7"
             android:layout_below="@+id/teks6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/asal_urun7"
-            android:textColor="#000000"
+            android:text="@string/asal_urun10"
+            android:textColor="#9f5b2e"
             android:textStyle="bold"
             android:gravity="center"/>
         <TextView
@@ -112,8 +96,8 @@
             android:layout_below="@+id/teks7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/asal_urun8"
-            android:textColor="#000000"
+            android:text="@string/asal_urun11"
+            android:textColor="#9f5b2e"
             android:textStyle="bold"
             android:gravity="center"/>
         <TextView
@@ -121,35 +105,8 @@
             android:layout_below="@+id/teks8"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/asal_urun9"
-            android:textColor="#000000"
-            android:textStyle="bold"
-            android:gravity="center"/>
-        <TextView
-            android:id="@+id/teks10"
-            android:layout_below="@+id/teks9"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/asal_urun10"
-            android:textColor="#000000"
-            android:textStyle="bold"
-            android:gravity="center"/>
-        <TextView
-            android:id="@+id/teks11"
-            android:layout_below="@+id/teks10"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/asal_urun11"
-            android:textColor="#000000"
-            android:textStyle="bold"
-            android:gravity="center"/>
-        <TextView
-            android:id="@+id/teks12"
-            android:layout_below="@+id/teks11"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:text="@string/asal_urun12"
-            android:textColor="#000000"
+            android:textColor="#9f5b2e"
             android:textStyle="bold"
             android:gravity="center"/>
     </RelativeLayout>

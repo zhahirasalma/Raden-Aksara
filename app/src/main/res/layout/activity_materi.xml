@@ -16,21 +16,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <TextView
-                android:id="@+id/raden_sdn2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="20dp"
-                android:text="Raden Aksara"
-                android:textSize="24sp"
-                android:textColor="@color/coklat"/>
 
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="75dp"
-                android:layout_toRightOf="@+id/raden_sdn2"
-                android:src="@drawable/logo_atas" />
 
             <TextView
                 android:id="@+id/tv1"
@@ -40,7 +26,6 @@
                 android:text="MATERI"
                 android:textColor="#9f5b2e"
                 android:textStyle="bold"
-                android:layout_below="@+id/raden_sdn2"
                 android:textSize="20dp"
                 android:padding="20dp" />
 
