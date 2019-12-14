@@ -24,7 +24,7 @@
             android:parentActivityName=".ProfilActivity" />
         <activity
             android:name=".ProfilActivity"
-            android:label="Profil"
+            android:label="Cek Poin"
             android:parentActivityName=".MenuActivity" />
         <activity
             android:name=".TerjemahAksActivity"

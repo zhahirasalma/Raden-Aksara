@@ -5,61 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F0E8C3"
-    tools:context=".ProfilActivity">
-
-    <TextView
-        android:id="@+id/raden_sdn1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:text="Raden Aksara"
-        android:textSize="24sp"
-        android:textColor="@color/coklat"
-        />
-
-    <ImageView
-        android:id="@+id/logo_sdn1"
-        android:layout_width="50dp"
-        android:layout_height="75dp"
-        android:layout_toRightOf="@+id/raden_sdn1"
-        android:src="@drawable/logo_atas" />
-
-    <ImageView
-        android:id="@+id/gambarprofil"
-        android:layout_width="80dp"
-        android:layout_height="120dp"
-        android:src="@drawable/profil"
-        android:layout_below="@+id/logo_sdn1"
-        />
-    <TextView
-        android:layout_toEndOf="@+id/gambarprofil"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/logo_sdn1"
-        android:layout_marginTop="40dp"
-        android:text="Rahma Suhita"
-        android:textColor="#9D5A2F"
-        android:textStyle="bold"
-        android:textSize="24sp"
-        />
-
-    <Button
-        android:id="@+id/editProfil"
-        android:layout_below="@+id/gambarprofil"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="20dp"
-        android:background="@drawable/button1"
-        android:text="Edit Profil" />
-
-
+    tools:context=".ProfilActivity"
+    android:gravity="center">
 
     <ImageView
         android:id="@+id/dolanan2"
         android:layout_below="@+id/editProfil"
-        android:layout_marginTop="20dp"
         android:layout_width="200dp"
         android:layout_height="100dp"
         android:src="@drawable/dolanan2"
@@ -68,8 +19,8 @@
     <TextView
         android:layout_below="@+id/editProfil"
         android:layout_toRightOf="@id/dolanan2"
-        android:layout_marginTop="40dp"
-        android:text="200"
+        android:layout_marginTop="30dp"
+        android:text=""
         android:textStyle="bold"
         android:textSize="35dp"
         android:layout_width="wrap_content"
@@ -79,9 +30,9 @@
     <ImageView
         android:id="@+id/dolanan3"
         android:layout_below="@+id/dolanan2"
-        android:layout_marginTop="20dp"
         android:layout_width="200dp"
         android:layout_height="100dp"
+        android:layout_marginTop="20dp"
         android:src="@drawable/dolanan3"
         />
 
@@ -89,21 +40,11 @@
         android:layout_below="@+id/dolanan2"
         android:layout_toRightOf="@id/dolanan3"
         android:layout_marginTop="40dp"
-        android:text="100"
+        android:text=""
         android:textStyle="bold"
         android:textSize="35dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         />
-
-    <Button
-        android:id="@+id/button_keluar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/button1"
-        android:text="Keluar"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/dolanan3"
-        android:layout_marginTop="50dp"/>
 
 </RelativeLayout>

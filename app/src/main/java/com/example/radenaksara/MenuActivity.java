@@ -56,7 +56,7 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
-        image_toProfil=findViewById(R.id.image_logo);
+        image_toProfil=findViewById(R.id.iv_poin);
         image_toProfil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
