@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MurdaActivity"
-    android:background="#f0e8c3"
+    android:background="@drawable/bg_materi2"
     >
 
 
@@ -27,7 +27,7 @@
                 android:id="@+id/image_murda"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_below="@+id/materi_murda"
+                android:layout_centerHorizontal="true"
                 android:src="@drawable/murda" />
 
         </RelativeLayout>

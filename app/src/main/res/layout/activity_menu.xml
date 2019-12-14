@@ -6,14 +6,14 @@
     android:layout_height="match_parent"
     android:id="@+id/drawer_menu"
     tools:context=".MenuActivity"
-    android:background="#f0e8c3">
+    android:background="@drawable/bg_materi">
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/linear_container"
-            android:background="#f0e8c3">
+            >
 
             <RelativeLayout
                 android:layout_width="match_parent"

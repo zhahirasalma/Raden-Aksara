@@ -5,8 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#f0e8c3"
+    android:background="@drawable/bg_materi2"
     tools:context=".CarakanActivity"
+    android:gravity="center"
     >
 
 
@@ -15,9 +16,9 @@
                 android:id="@+id/materi_carakan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Aksara Carakan"
-                android:layout_marginTop="20dp"
-                android:textSize="24sp"
+                android:text="@string/aksara_carakan"
+                android:layout_marginTop="30dp"
+                android:textSize="16sp"
                 android:textColor="@color/coklat"
                 android:layout_marginLeft="10dp"
                 android:textStyle="bold"
@@ -27,7 +28,7 @@
                 android:id="@+id/image_carakan"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_below="@+id/materi_carakan"
+                android:layout_centerHorizontal="true"
                 android:src="@drawable/carakan" />
 
         </RelativeLayout>
