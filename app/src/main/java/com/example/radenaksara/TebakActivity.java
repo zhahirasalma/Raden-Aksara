@@ -35,10 +35,8 @@ public class TebakActivity extends AppCompatActivity {
     private RadioButton sr1;
     RadioGroup sradioGroup;
     RadioButton radioButton;
-    ArrayList<Integer> gambar;
-    ArrayList<String> soal;
     String[][] jawaban={{"Ra","Ha","Ca", "La"}, {"Na","Ma","Ga","Ya"} };
-    Long poin;
+//    Long poin;
 
     private ColorStateList textColorDefaultCd;
 
@@ -74,8 +72,8 @@ public class TebakActivity extends AppCompatActivity {
         sr1=findViewById(R.id.r1);
         sr1.setText(""+jawaban[0][0]);
 
-        SharedPreferences preferences=PreferenceManager.getDefaultSharedPreferences(this);
-        poin=preferences.getLong("Poin", 0 );
+//        SharedPreferences preferences=PreferenceManager.getDefaultSharedPreferences(this);
+//        poin=preferences.getLong("Poin", 0 );
 
     }
 
@@ -121,6 +119,7 @@ public class TebakActivity extends AppCompatActivity {
         if (selectedtext.equals(jawaban[0][2])){
             countDownTimer.cancel();
             Intent intent=new Intent(this, Tebak2Activity.class);
+            Poin.CHECKPOIN_POIN += 100;
             startActivity(intent);
         }else{
             showEditDialog();
@@ -132,23 +131,22 @@ public class TebakActivity extends AppCompatActivity {
         FragmentManager fm = getSupportFragmentManager();
         AlertDialogueFragment alertDialogueFragment = AlertDialogueFragment.newInstance("Some Title");
         alertDialogueFragment.show(fm, "fragment_edit_name");
+
     }
 
-    private void storePoin(){
-        SharedPreferences preferences= PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor=preferences.edit();
-        editor.putLong("Poin", poin);
-        editor.apply();
-    }
-
-    protected void onDestroy(){
-        super.onDestroy();
-        if(countDownTimer!=null){
-            showEditDialog();
-            countDownTimer.cancel();
-        }
-    }
-
-
+//    private void storePoin(){
+//        SharedPreferences preferences= PreferenceManager.getDefaultSharedPreferences(this);
+//        SharedPreferences.Editor editor=preferences.edit();
+//        editor.putLong("Poin", poin);
+//        editor.apply();
+//    }
+//
+//    protected void onDestroy(){
+//        super.onDestroy();
+//        if(countDownTimer!=null){
+//            showEditDialog();
+//            countDownTimer.cancel();
+//        }
+//    }
 
 }

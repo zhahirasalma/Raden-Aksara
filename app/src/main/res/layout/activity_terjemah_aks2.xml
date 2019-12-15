@@ -7,17 +7,29 @@
     android:background="@drawable/bg_materi2"
     tools:context=".TerjemahAks2Activity">
 
-
     <TextView
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:textSize="20dp"
+        android:textSize="30sp"
         android:textStyle="bold"
         android:textColor="#9f5b2e"
-        android:text="Terjemah Aksara"
+        android:text="Poin: 100"
         android:layout_marginTop="30dp"
         android:layout_marginLeft="10dp"
-        android:id="@+id/tv1"/>
+        android:id="@+id/poin_count"/>
+
+    <TextView
+        android:id="@+id/countdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="00:20"
+        android:textStyle="bold"
+        android:textColor="#9f5b2e"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="10dp"
+        />
 
     <ImageView
         android:padding="20dp"
@@ -26,7 +38,7 @@
         android:id="@+id/iv_ta2"
         android:layout_centerHorizontal="true"
         android:src="@drawable/terjemahan2"
-        android:layout_below="@id/tv1"/>
+        android:layout_below="@id/countdown"/>
 
     <TextView
         android:layout_height="wrap_content"
@@ -34,7 +46,7 @@
         android:textSize="20dp"
         android:textStyle="bold"
         android:textColor="#a35638"
-        android:text="1. Terjemah kalimat diatas adalah..."
+        android:text="2. Terjemah kalimat diatas adalah..."
         android:layout_alignParentLeft="true"
         android:id="@+id/tv2"
         android:layout_below="@+id/iv_ta2"/>
@@ -57,7 +69,6 @@
         android:textColor="#a35638"
         android:text="anak kadhal"
         android:id="@+id/r1a"
-        android:onClick="onRadioButtonClicked"
         android:checked="true"/>
 
     <RadioButton
@@ -67,8 +78,7 @@
         android:textStyle="bold"
         android:textColor="#a35638"
         android:text="katon cetha"
-        android:id="@+id/r2a"
-        android:onClick="onRadioButtonClicked"/>
+        android:id="@+id/r2a" />
 
     <RadioButton
         android:layout_height="wrap_content"
@@ -77,8 +87,7 @@
         android:textStyle="bold"
         android:textColor="#a35638"
         android:text="katon apik"
-        android:id="@+id/r3a"
-        android:onClick="onRadioButtonClicked"/>
+        android:id="@+id/r3a" />
 
     <RadioButton
         android:layout_height="wrap_content"
@@ -87,8 +96,7 @@
         android:textStyle="bold"
         android:textColor="#a35638"
         android:text="mangan roti"
-        android:id="@+id/r4a"
-        android:onClick="onRadioButtonClicked"/>
+        android:id="@+id/r4a" />
 
 </RadioGroup>
 

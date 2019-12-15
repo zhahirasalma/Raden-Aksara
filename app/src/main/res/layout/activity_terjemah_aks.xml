@@ -7,17 +7,29 @@
     android:background="@drawable/bg_materi2"
     tools:context=".TerjemahAksActivity">
 
-
     <TextView
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:textSize="20dp"
+        android:textSize="30sp"
         android:textStyle="bold"
         android:textColor="#9f5b2e"
-        android:text="Terjemah Aksara"
+        android:text="Poin: 0"
         android:layout_marginTop="30dp"
         android:layout_marginLeft="10dp"
-        android:id="@+id/tv1"/>
+        android:id="@+id/poin_count"/>
+
+    <TextView
+        android:id="@+id/countdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="00:20"
+        android:textStyle="bold"
+        android:textColor="#9f5b2e"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="10dp"
+        />
 
     <ImageView
         android:padding="20dp"
@@ -26,7 +38,7 @@
         android:id="@+id/iv_ca"
         android:layout_centerHorizontal="true"
         android:src="@drawable/terjemahan"
-        android:layout_below="@id/tv1"/>
+        android:layout_below="@id/countdown"/>
 
     <TextView
         android:layout_height="wrap_content"
@@ -59,7 +71,6 @@
             android:textColor="#a35638"
             android:text="mangan sega"
             android:id="@+id/r1"
-            android:onClick="onRadioButtonClicked"
             android:checked="true"/>
 
         <RadioButton
@@ -70,7 +81,7 @@
             android:textColor="#a35638"
             android:text="mangan nanas"
             android:id="@+id/r2"
-            android:onClick="onRadioButtonClicked"/>
+            />
 
         <RadioButton
             android:layout_height="wrap_content"
@@ -80,7 +91,7 @@
             android:textColor="#a35638"
             android:text="numpak motor"
             android:id="@+id/r3"
-            android:onClick="onRadioButtonClicked"/>
+            />
 
         <RadioButton
             android:layout_height="wrap_content"
@@ -90,7 +101,7 @@
             android:textColor="#a35638"
             android:text="mlayu banter"
             android:id="@+id/r4"
-            android:onClick="onRadioButtonClicked"/>
+            />
 
     </RadioGroup>
 

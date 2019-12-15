@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_materi"
+    android:background="#f0e8c3"
     tools:context=".DolananActivity"
     android:layout_centerHorizontal="true"
     android:gravity="center"
@@ -16,9 +16,8 @@
         android:id="@+id/iv_tb"
         android:layout_width="240dp"
         android:layout_height="160dp"
-        android:src="@drawable/ya"
+        android:src="@drawable/iv_tebak"
         android:padding="12dp"
-        android:background="@color/colorPrimary"
         android:layout_centerHorizontal="true" />
 
     <TextView
@@ -36,10 +35,11 @@
         android:id="@+id/iv_tj"
         android:layout_width="240dp"
         android:layout_height="160dp"
-        android:src="@drawable/terjemah_aksara"
+        android:src="@drawable/iv_tj"
         android:padding="12dp"
         android:layout_below="@id/tv_tb"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        />
 
     <TextView
         android:id="@+id/tv_tj"

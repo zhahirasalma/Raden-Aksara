@@ -34,10 +34,11 @@ public class Tebak2Activity extends AppCompatActivity {
     private RadioButton sr1;
     RadioGroup sradioGroup;
     RadioButton radioButton;
+    TextView tbkPoin;
 //    ArrayList<Integer> gambar;
 //    ArrayList<String> soal;
     String[][] jawaban={{"Ra","Ha","Ca", "La"}, {"Na","Ma","Ga","Ya"} };
-    Long poin;
+//    Long poin;
 
     private ColorStateList textColorDefaultCd;
 
@@ -51,6 +52,9 @@ public class Tebak2Activity extends AppCompatActivity {
 
         totalPoin=findViewById(R.id.poin_count);
         poin_countdown=findViewById(R.id.countdown);
+        tbkPoin = findViewById(R.id.poin_count);
+
+        tbkPoin.setText("Poin " + Poin.CHECKPOIN_POIN);
 
         textColorDefaultCd=poin_countdown.getTextColors();
         timeLeftInMillis=COUNTDOWN_IN_MILLIS;
@@ -73,8 +77,11 @@ public class Tebak2Activity extends AppCompatActivity {
         sr1=findViewById(R.id.r1a);
         sr1.setText(""+jawaban[1][0]);
 
-        SharedPreferences preferences= PreferenceManager.getDefaultSharedPreferences(this);
-        poin=preferences.getLong("Poin", 0 );
+//        SharedPreferences preferences= PreferenceManager.getDefaultSharedPreferences(this);
+//        poin=preferences.getLong("Poin", 0 );
+
+        totalPoin=findViewById(R.id.poin_count);
+        totalPoin.setText(String.valueOf(Poin.CHECKPOIN_POIN));
 
     }
 
@@ -119,8 +126,8 @@ public class Tebak2Activity extends AppCompatActivity {
 
         if (selectedtext.equals(jawaban[1][3])){
             countDownTimer.cancel();
-            Intent intent=new Intent(this, DolananActivity.class);
-            startActivity(intent);
+            Poin.CHECKPOIN_POIN += 100;
+            showEndDialog();
         }else{
             showEditDialog();
             startCountDown();
@@ -133,20 +140,26 @@ public class Tebak2Activity extends AppCompatActivity {
         alertDialogueFragment.show(fm, "fragment_edit_name");
     }
 
-    private void storePoin(){
-        SharedPreferences preferences= PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor=preferences.edit();
-        editor.putLong("Poin", poin);
-        editor.apply();
+    private void showEndDialog(){
+        FragmentManager fm = getSupportFragmentManager();
+        Alert2Fragment alert2Fragment = Alert2Fragment.newInstance("Some Title");
+        alert2Fragment.show(fm, "fragment_edit_name");
     }
 
-    protected void onDestroy(){
-        super.onDestroy();
-        if(countDownTimer!=null){
-            showEditDialog();
-            countDownTimer.cancel();
-        }
-    }
+//    private void storePoin(){
+//        SharedPreferences preferences= PreferenceManager.getDefaultSharedPreferences(this);
+//        SharedPreferences.Editor editor=preferences.edit();
+//        editor.putLong("Poin", poin);
+//        editor.apply();
+//    }
+
+//    protected void onDestroy(){
+//        super.onDestroy();
+//        if(countDownTimer!=null){
+//            showEditDialog();
+//            countDownTimer.cancel();
+//        }
+//    }
 
 
 

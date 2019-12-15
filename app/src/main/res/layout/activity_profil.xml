@@ -4,47 +4,48 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_materi"
+    android:background="#f0e8c3"
     tools:context=".ProfilActivity"
-    android:gravity="center">
+    android:gravity="center"
+    >
 
     <ImageView
         android:id="@+id/dolanan2"
-        android:layout_below="@+id/editProfil"
-        android:layout_width="200dp"
-        android:layout_height="100dp"
-        android:src="@drawable/dolanan2"
+        android:layout_width="240dp"
+        android:layout_height="160dp"
+        android:src="@drawable/iv_tebak"
+
         />
 
     <TextView
-        android:layout_below="@+id/editProfil"
-        android:layout_toRightOf="@id/dolanan2"
-        android:layout_marginTop="30dp"
-        android:text=""
+        android:layout_below="@id/dolanan2"
+        android:text="Poin Tebak Aksara: "
         android:textStyle="bold"
-        android:textSize="35dp"
+        android:textSize="20sp"
+        android:textColor="#9f5b2e"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/text_dolanan2"
         />
 
     <ImageView
         android:id="@+id/dolanan3"
-        android:layout_below="@+id/dolanan2"
-        android:layout_width="200dp"
-        android:layout_height="100dp"
         android:layout_marginTop="20dp"
-        android:src="@drawable/dolanan3"
+        android:layout_below="@+id/text_dolanan2"
+        android:layout_width="240dp"
+        android:layout_height="160dp"
+        android:src="@drawable/iv_tj"
         />
 
     <TextView
-        android:layout_below="@+id/dolanan2"
-        android:layout_toRightOf="@id/dolanan3"
-        android:layout_marginTop="40dp"
-        android:text=""
+        android:layout_below="@+id/dolanan3"
+        android:text="Poin Terjemah Aksara:"
         android:textStyle="bold"
-        android:textSize="35dp"
+        android:textSize="20sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/text_dolanan3"
+        android:textColor="#9f5b2e"
         />
 
 </RelativeLayout>
