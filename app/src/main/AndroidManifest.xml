@@ -12,12 +12,17 @@
         android:roundIcon="@mipmap/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TerjemahAks2Activity"
+        <activity android:name=".Tebak5Activity"></activity>
+        <activity android:name=".Tebak4Activity" />
+        <activity android:name=".Tebak3Activity" />
+        <activity
+            android:name=".TerjemahAks2Activity"
             android:label="Terjemah Aksara"
-            android:parentActivityName=".DolananActivity"></activity>
-        <activity android:name=".Tebak2Activity"
+            android:parentActivityName=".DolananActivity" />
+        <activity
+            android:name=".Tebak2Activity"
             android:label="Tebak Aksara"
-            android:parentActivityName=".DolananActivity"/>
+            android:parentActivityName=".DolananActivity" />
         <activity
             android:name=".EditProfilActivity"
             android:label="Edit Profil"

@@ -4,7 +4,9 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.text.style.IconMarginSpan;
 import android.view.View;
 import android.widget.Button;
@@ -19,14 +21,8 @@ public class ProfilActivity extends AppCompatActivity {
     TextView tvTebak;
     TextView tvTerjemah;
 
-//    public static final String SHARED_PREFS="sharedPrefs";
-//    public static final String KEY_HIGHSCRORE="keyHighscore";
-//
-//    private TextView TebakHighscore;
-//    private TextView TerjemahHighscore;
-//
-//    private int tebHs;
-//    private int terHs;
+    private long sharedPoinTebak;
+    private long sharedPoinTerjemah;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,9 +31,11 @@ public class ProfilActivity extends AppCompatActivity {
         tvTebak = findViewById(R.id.text_dolanan2);
         tvTerjemah = findViewById(R.id.text_dolanan3);
 
-        tvTerjemah.setText("Poin Terjemah Aksara: " + Poin.CHECKPOIN_TERJEMAH);
+        showPoin();
 
-        tvTebak.setText("Poin Tebak Aksara: " + Poin.CHECKPOIN_POIN);
+        tvTerjemah.setText("Poin Terjemah Aksara: " + sharedPoinTerjemah);
+
+        tvTebak.setText("Poin Tebak Aksara: " + sharedPoinTebak);
 
 
         nilaitebak=findViewById(R.id.dolanan2);
@@ -46,5 +44,11 @@ public class ProfilActivity extends AppCompatActivity {
         nilaiterjemah=findViewById(R.id.dolanan3);
         Glide.with(this).load(R.drawable.iv_tj).into(nilaiterjemah);
 
+    }
+
+    private void showPoin() {
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
+        sharedPoinTebak = sp.getLong("poinUser", 0);
+        sharedPoinTerjemah=sp.getLong("poinUserTerjemah",0);
     }
 }

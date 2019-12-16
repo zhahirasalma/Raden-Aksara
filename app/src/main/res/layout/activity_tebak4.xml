@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_materi2"
+    tools:context=".Tebak4Activity">
+
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="#9f5b2e"
+        android:text="Poin: 0"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/poin_count"/>
+
+    <TextView
+        android:id="@+id/countdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="00:15"
+        android:textStyle="bold"
+        android:textColor="#9f5b2e"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="10dp"
+        />
+
+    <ImageView
+        android:padding="3dp"
+        android:layout_height="200dp"
+        android:layout_width="260dp"
+        android:id="@+id/iv_la"
+        android:scaleType="fitXY"
+        android:layout_below="@id/countdown"
+        android:src="@drawable/la"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="#a35638"
+        android:layout_marginLeft="10dp"
+        android:text="4. Aksara diatas adalah..."
+        android:id="@+id/tv2"
+        android:layout_below="@id/iv_la"/>
+
+
+    <RadioGroup
+        android:padding="10dp"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/radioGroup"
+        android:layout_below="@+id/tv2">
+
+        <RadioButton
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="#a35638"
+            android:text="Da"
+            android:id="@+id/r1a"
+            android:checked="true"/>
+
+        <RadioButton
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="#a35638"
+            android:text="Ha"
+            android:id="@+id/r2a" />
+
+        <RadioButton
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="#a35638"
+            android:text="Ka"
+            android:id="@+id/r3a" />
+
+        <RadioButton
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="#a35638"
+            android:text="La"
+            android:id="@+id/r4a" />
+
+    </RadioGroup>
+
+    <Button
+        android:background="@drawable/button1"
+        android:padding="20dp"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:text="Kirim"
+        android:id="@+id/button1a"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/radioGroup"
+        android:onClick="showKirim"
+        android:layout_marginBottom="10dp"/>
+
+
+
+</RelativeLayout>

@@ -110,10 +110,19 @@ public class TerjemahAksActivity extends AppCompatActivity {
             Intent intent=new Intent(this, TerjemahAks2Activity.class);
             Poin.CHECKPOIN_TERJEMAH += 100;
             startActivity(intent);
+
+            simpanPoin();
         }else{
             showEditDialog();
             startCountDown();
         }
+    }
+
+    public void simpanPoin() {
+        SharedPreferences sp =  PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor = sp.edit();
+        editor.putLong("poinUser", Poin.CHECKPOIN_POIN);
+        editor.commit();
     }
 
     private void showEditDialog() {
@@ -122,12 +131,6 @@ public class TerjemahAksActivity extends AppCompatActivity {
         alertDialogueFragment.show(fm, "fragment_edit_name");
     }
 
-    private void storePoin(){
-        SharedPreferences preferences= PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor=preferences.edit();
-        editor.putLong("Poin", poin);
-        editor.apply();
-    }
 //
 //    protected void onDestroy(){
 //        super.onDestroy();

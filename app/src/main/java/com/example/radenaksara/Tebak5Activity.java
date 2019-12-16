@@ -21,22 +21,22 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
+import java.util.ArrayList;
 import java.util.Locale;
 
-public class TerjemahAks2Activity extends AppCompatActivity {
-    private static final long COUNTDOWN_IN_MILLIS=20000;
+public class Tebak5Activity extends AppCompatActivity {
+    private static final long COUNTDOWN_IN_MILLIS=15000;
 
     private TextView totalPoin;
     private TextView poin_countdown;
-    private ImageView soalTerjemah2;
-
+    private ImageView soal5;
+    private TextView descSoal;
     private RadioButton sr1;
     RadioGroup sradioGroup;
     RadioButton radioButton;
-    TextView terjemahAks;
-
-    String[][] jawaban={{"mangan sega","mangan nanas","numpak motor", "mlayu banter"}, {"anak kadhal","katon cetha","katon apik","mangan roti"} };
-    Long poin;
+    TextView tbkPoin;
+    String[][] jawaban={{"Ja","Na","Sa", "Ba"}};
+//    Long poin;
 
     private ColorStateList textColorDefaultCd;
 
@@ -46,25 +46,27 @@ public class TerjemahAks2Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_terjemah_aks2);
+        setContentView(R.layout.activity_tebak5);
 
+        totalPoin=findViewById(R.id.poin_count);
         poin_countdown=findViewById(R.id.countdown);
-        terjemahAks = findViewById(R.id.poin_count);
+        tbkPoin = findViewById(R.id.poin_count);
 
-        terjemahAks.setText("Poin: " + Poin.CHECKPOIN_TERJEMAH);
+        tbkPoin.setText("Poin: " + Poin.CHECKPOIN_POIN);
 
         textColorDefaultCd=poin_countdown.getTextColors();
         timeLeftInMillis=COUNTDOWN_IN_MILLIS;
         startCountDown();
 
-        soalTerjemah2=findViewById(R.id.iv_ta2);
-        Glide.with(this).load(R.drawable.terjemahan2).into(soalTerjemah2);
+        soal5=findViewById(R.id.iv_ja);
+        Glide.with(this).load(R.drawable.ja).into(soal5);
 
         sr1=findViewById(R.id.r1a);
-        sr1.setText(""+jawaban[1][0]);
+        sr1.setText(""+jawaban[0][0]);
 
-        SharedPreferences preferences= PreferenceManager.getDefaultSharedPreferences(this);
-        poin=preferences.getLong("Poin", 0 );
+        totalPoin=findViewById(R.id.poin_count);
+        totalPoin.setText(String.valueOf(Poin.CHECKPOIN_POIN));
+
     }
 
     private void startCountDown(){
@@ -99,29 +101,30 @@ public class TerjemahAks2Activity extends AppCompatActivity {
         }
     }
 
+
     public void showKirim(View view) {
         sradioGroup=(RadioGroup)findViewById(R.id.radioGroup);
         int checked=sradioGroup.getCheckedRadioButtonId();
         radioButton =findViewById(checked);
         String selectedtext=(String)radioButton.getText();
 
-        if (selectedtext.equals(jawaban[1][0])){
+        if (selectedtext.equals(jawaban[0][0])){
             countDownTimer.cancel();
-            Poin.CHECKPOIN_TERJEMAH += 100;
+            Poin.CHECKPOIN_POIN += 100;
 
             simpanPoin();
+
             showEndDialog();
         }else{
             showEditDialog();
             startCountDown();
         }
-
     }
 
     public void simpanPoin() {
         SharedPreferences sp =  PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor = sp.edit();
-        editor.putLong("poinUserTerjemah", Poin.CHECKPOIN_POIN);
+        editor.putLong("poinUser", Poin.CHECKPOIN_POIN);
         editor.commit();
     }
 
@@ -137,12 +140,6 @@ public class TerjemahAks2Activity extends AppCompatActivity {
         alert2Fragment.show(fm, "fragment_edit_name");
     }
 
-    private void storePoin(){
-        SharedPreferences preferences= PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor=preferences.edit();
-        editor.putLong("Poin", poin);
-        editor.apply();
-    }
 
 //    protected void onDestroy(){
 //        super.onDestroy();
@@ -151,6 +148,7 @@ public class TerjemahAks2Activity extends AppCompatActivity {
 //            countDownTimer.cancel();
 //        }
 //    }
+
 
 
 }

@@ -120,11 +120,21 @@ public class TebakActivity extends AppCompatActivity {
             countDownTimer.cancel();
             Intent intent=new Intent(this, Tebak2Activity.class);
             Poin.CHECKPOIN_POIN += 100;
+
+            simpanPoin();
+
             startActivity(intent);
         }else{
             showEditDialog();
             startCountDown();
         }
+    }
+
+    public void simpanPoin() {
+        SharedPreferences sp =  PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor = sp.edit();
+        editor.putLong("poinUser", Poin.CHECKPOIN_POIN);
+        editor.commit();
     }
 
     private void showEditDialog() {
