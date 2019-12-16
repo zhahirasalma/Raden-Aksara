@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_materi2"
+    tools:context=".TerjemahAks4Activity">
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="#9f5b2e"
+        android:text="Poin: 100"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/poin_count"/>
+
+    <TextView
+        android:id="@+id/countdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="00:20"
+        android:textStyle="bold"
+        android:textColor="#9f5b2e"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="10dp"
+        />
+
+    <ImageView
+        android:padding="20dp"
+        android:layout_height="150dp"
+        android:layout_width="300dp"
+        android:id="@+id/iv_ta4"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/katon_apik"
+        android:layout_below="@id/countdown"/>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="#a35638"
+        android:text="4. Terjemah kalimat diatas adalah..."
+        android:layout_alignParentLeft="true"
+        android:id="@+id/tv2"
+        android:layout_below="@+id/iv_ta4"/>
+
+
+    -<RadioGroup
+    android:padding="10dp"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_marginTop="10dp"
+    android:id="@+id/radioGroup"
+    android:layout_below="@+id/tv2">
+
+    <RadioButton
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="#a35638"
+        android:text="katon apik"
+        android:id="@+id/r1a"
+        android:checked="true"/>
+
+    <RadioButton
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="#a35638"
+        android:text="nyawang lawang"
+        android:id="@+id/r2a" />
+
+    <RadioButton
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="#a35638"
+        android:text="katon ajur"
+        android:id="@+id/r3a" />
+
+    <RadioButton
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="#a35638"
+        android:text="katon alus"
+        android:id="@+id/r4a" />
+
+</RadioGroup>
+
+    <Button
+        android:background="@drawable/button1"
+        android:padding="20dp"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:text="Kirim"
+        android:id="@+id/button1"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/radioGroup"
+        android:onClick="showKirim"
+        android:layout_marginBottom="10dp"/>
+
+</RelativeLayout>

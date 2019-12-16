@@ -23,19 +23,19 @@ import com.bumptech.glide.Glide;
 
 import java.util.Locale;
 
-public class TerjemahAks2Activity extends AppCompatActivity {
+public class TerjemahAks3Activity extends AppCompatActivity {
     private static final long COUNTDOWN_IN_MILLIS=20000;
 
     private TextView totalPoin;
     private TextView poin_countdown;
-    private ImageView soalTerjemah2;
+    private ImageView soalTerjemah3;
 
     private RadioButton sr1;
     RadioGroup sradioGroup;
     RadioButton radioButton;
     TextView terjemahAks;
 
-    String[][] jawaban={{"mangan sega","mangan nanas","numpak motor", "mlayu banter"}, {"anak kadhal","katon cetha","katon apik","mangan roti"} };
+    String[][] jawaban={{"mangan jenang","saben wengi","mangan roti", "sega putih"}};
     Long poin;
 
     private ColorStateList textColorDefaultCd;
@@ -46,7 +46,7 @@ public class TerjemahAks2Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_terjemah_aks2);
+        setContentView(R.layout.activity_terjemah_aks3);
 
         poin_countdown=findViewById(R.id.countdown);
         terjemahAks = findViewById(R.id.poin_count);
@@ -57,11 +57,11 @@ public class TerjemahAks2Activity extends AppCompatActivity {
         timeLeftInMillis=COUNTDOWN_IN_MILLIS;
         startCountDown();
 
-        soalTerjemah2=findViewById(R.id.iv_ta2);
-        Glide.with(this).load(R.drawable.terjemahan2).into(soalTerjemah2);
+        soalTerjemah3=findViewById(R.id.iv_ta3);
+        Glide.with(this).load(R.drawable.mangan_roti).into(soalTerjemah3);
 
         sr1=findViewById(R.id.r1a);
-        sr1.setText(""+jawaban[1][0]);
+        sr1.setText(""+jawaban[0][0]);
 
         SharedPreferences preferences= PreferenceManager.getDefaultSharedPreferences(this);
         poin=preferences.getLong("Poin", 0 );
@@ -105,7 +105,7 @@ public class TerjemahAks2Activity extends AppCompatActivity {
         radioButton =findViewById(checked);
         String selectedtext=(String)radioButton.getText();
 
-        if (selectedtext.equals(jawaban[1][0])){
+        if (selectedtext.equals(jawaban[0][2])){
             countDownTimer.cancel();
             Poin.CHECKPOIN_TERJEMAH += 100;
 

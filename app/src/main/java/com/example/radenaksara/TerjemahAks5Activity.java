@@ -23,19 +23,20 @@ import com.bumptech.glide.Glide;
 
 import java.util.Locale;
 
-public class TerjemahAks2Activity extends AppCompatActivity {
+public class TerjemahAks5Activity extends AppCompatActivity {
     private static final long COUNTDOWN_IN_MILLIS=20000;
 
     private TextView totalPoin;
     private TextView poin_countdown;
-    private ImageView soalTerjemah2;
+    private ImageView soalTerjemah4;
 
     private RadioButton sr1;
     RadioGroup sradioGroup;
     RadioButton radioButton;
     TextView terjemahAks;
 
-    String[][] jawaban={{"mangan sega","mangan nanas","numpak motor", "mlayu banter"}, {"anak kadhal","katon cetha","katon apik","mangan roti"} };
+    String[][] jawaban={{"bapak lagi gerah padaran","bapak lagi nyapu omah",
+            "bapak lagi gerah waja", "bapak lagi nyapu latar"}};
     Long poin;
 
     private ColorStateList textColorDefaultCd;
@@ -46,7 +47,7 @@ public class TerjemahAks2Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_terjemah_aks2);
+        setContentView(R.layout.activity_terjemah_aks5);
 
         poin_countdown=findViewById(R.id.countdown);
         terjemahAks = findViewById(R.id.poin_count);
@@ -57,11 +58,11 @@ public class TerjemahAks2Activity extends AppCompatActivity {
         timeLeftInMillis=COUNTDOWN_IN_MILLIS;
         startCountDown();
 
-        soalTerjemah2=findViewById(R.id.iv_ta2);
-        Glide.with(this).load(R.drawable.terjemahan2).into(soalTerjemah2);
+        soalTerjemah4=findViewById(R.id.iv_ta4);
+        Glide.with(this).load(R.drawable.katon_apik).into(soalTerjemah4);
 
         sr1=findViewById(R.id.r1a);
-        sr1.setText(""+jawaban[1][0]);
+        sr1.setText(""+jawaban[0][0]);
 
         SharedPreferences preferences= PreferenceManager.getDefaultSharedPreferences(this);
         poin=preferences.getLong("Poin", 0 );
@@ -105,11 +106,12 @@ public class TerjemahAks2Activity extends AppCompatActivity {
         radioButton =findViewById(checked);
         String selectedtext=(String)radioButton.getText();
 
-        if (selectedtext.equals(jawaban[1][0])){
+        if (selectedtext.equals(jawaban[0][2])){
             countDownTimer.cancel();
             Poin.CHECKPOIN_TERJEMAH += 100;
 
             simpanPoin();
+            showEndDialog();
         }else{
             showEditDialog();
             startCountDown();
@@ -128,6 +130,12 @@ public class TerjemahAks2Activity extends AppCompatActivity {
         FragmentManager fm = getSupportFragmentManager();
         AlertDialogueFragment alertDialogueFragment = AlertDialogueFragment.newInstance("Some Title");
         alertDialogueFragment.show(fm, "fragment_edit_name");
+    }
+
+    private void showEndDialog(){
+        FragmentManager fm = getSupportFragmentManager();
+        Alert2Fragment alert2Fragment = Alert2Fragment.newInstance("Some Title");
+        alert2Fragment.show(fm, "fragment_edit_name");
     }
 
     private void storePoin(){
