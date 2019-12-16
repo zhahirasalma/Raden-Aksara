@@ -41,10 +41,10 @@ public class ProfilActivity extends AppCompatActivity {
 
 
         nilaitebak=findViewById(R.id.dolanan2);
-        Glide.with(this).load(R.drawable.dolanan2).into(nilaitebak);
+        Glide.with(this).load(R.drawable.iv_tebak).into(nilaitebak);
 
         nilaiterjemah=findViewById(R.id.dolanan3);
-        Glide.with(this).load(R.drawable.dolanan3).into(nilaiterjemah);
+        Glide.with(this).load(R.drawable.iv_tj).into(nilaiterjemah);
 
     }
 }
