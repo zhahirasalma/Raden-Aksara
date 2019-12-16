@@ -48,7 +48,9 @@ public class ProfilActivity extends AppCompatActivity {
 
     private void showPoin() {
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
-        sharedPoinTebak = sp.getLong("poinUser", 0);
-        sharedPoinTerjemah=sp.getLong("poinUserTerjemah",0);
+//        sharedPoinTebak = sp.getLong("poinUser", 0);
+//        sharedPoinTerjemah=sp.getLong("poinUserTerjemah",0);
+        sharedPoinTebak = Poin.CHECKPOIN_POIN;
+        sharedPoinTerjemah= Poin.CHECKPOIN_TERJEMAH;
     }
 }

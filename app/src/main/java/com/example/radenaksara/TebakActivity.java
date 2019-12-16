@@ -48,6 +48,8 @@ public class TebakActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tebak);
 
+        Poin.CHECKPOIN_POIN = 0;
+
         totalPoin=findViewById(R.id.poin_count);
         poin_countdown=findViewById(R.id.countdown);
 
@@ -55,25 +57,11 @@ public class TebakActivity extends AppCompatActivity {
         timeLeftInMillis=COUNTDOWN_IN_MILLIS;
         startCountDown();
 
-//        gambar=new ArrayList<>();
-//        gambar.add(R.drawable.tebak_ca);
-//        gambar.add(R.drawable.ya);
-//
-//        soal=new ArrayList<>();
-//        soal.add("1. Aksara diatas adalah..");
-
-
         soal1=findViewById(R.id.iv_ca);
         Glide.with(this).load(R.drawable.tebak_ca).into(soal1);
 
-//        descSoal=findViewById(R.id.tv2);
-//        descSoal.setText(String.valueOf(soal));
-
         sr1=findViewById(R.id.r1);
         sr1.setText(""+jawaban[0][0]);
-
-//        SharedPreferences preferences=PreferenceManager.getDefaultSharedPreferences(this);
-//        poin=preferences.getLong("Poin", 0 );
 
     }
 

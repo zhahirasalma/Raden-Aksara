@@ -12,6 +12,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RadioButton;
@@ -42,13 +43,13 @@ public class TerjemahAksActivity extends AppCompatActivity {
     private CountDownTimer countDownTimer;
     private long timeLeftInMillis;
 
-    public static final String SHARED_PREFS="sharedPrefs";
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_terjemah_aks);
+
+        Poin.CHECKPOIN_TERJEMAH = 0;
 
         totalPoin=findViewById(R.id.poin_count);
         poin_countdown=findViewById(R.id.countdown);
@@ -63,8 +64,6 @@ public class TerjemahAksActivity extends AppCompatActivity {
         sr1=findViewById(R.id.r1);
         sr1.setText(""+jawaban[0][0]);
 
-        SharedPreferences preferences= PreferenceManager.getDefaultSharedPreferences(this);
-        poin=preferences.getLong("Poin", 0 );
     }
 
     private void startCountDown(){
@@ -108,8 +107,9 @@ public class TerjemahAksActivity extends AppCompatActivity {
         if (selectedtext.equals(jawaban[0][1])){
             countDownTimer.cancel();
             Intent intent=new Intent(this, TerjemahAks2Activity.class);
-            Poin.CHECKPOIN_TERJEMAH += 100;
             startActivity(intent);
+            Poin.CHECKPOIN_TERJEMAH += 100;
+            Log.d("LOG",Poin.CHECKPOIN_TERJEMAH.toString());
 
             simpanPoin();
         }else{
@@ -121,7 +121,7 @@ public class TerjemahAksActivity extends AppCompatActivity {
     public void simpanPoin() {
         SharedPreferences sp =  PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor = sp.edit();
-        editor.putLong("poinUser", Poin.CHECKPOIN_POIN);
+        editor.putLong("poinUserTerjemah", Poin.CHECKPOIN_TERJEMAH);
         editor.commit();
     }
 

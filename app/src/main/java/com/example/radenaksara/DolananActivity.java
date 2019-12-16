@@ -6,6 +6,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
@@ -17,6 +18,8 @@ public class DolananActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dolanan);
+
+        Log.d("LOG",Poin.CHECKPOIN_TERJEMAH.toString());
         tebak=findViewById(R.id.iv_tb);
         tebak.setOnClickListener(new View.OnClickListener() {
             @Override

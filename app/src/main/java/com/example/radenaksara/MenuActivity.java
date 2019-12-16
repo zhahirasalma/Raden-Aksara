@@ -29,6 +29,7 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
+        Log.d("LOG",Poin.CHECKPOIN_TERJEMAH.toString());
         image_toMateri=findViewById(R.id.iv_materi);
         image_toMateri.setOnClickListener(new View.OnClickListener() {
             @Override

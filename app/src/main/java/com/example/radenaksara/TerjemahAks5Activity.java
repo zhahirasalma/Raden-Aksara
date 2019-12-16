@@ -12,6 +12,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RadioButton;
@@ -28,7 +29,7 @@ public class TerjemahAks5Activity extends AppCompatActivity {
 
     private TextView totalPoin;
     private TextView poin_countdown;
-    private ImageView soalTerjemah4;
+    private ImageView soalTerjemah5;
 
     private RadioButton sr1;
     RadioGroup sradioGroup;
@@ -58,14 +59,12 @@ public class TerjemahAks5Activity extends AppCompatActivity {
         timeLeftInMillis=COUNTDOWN_IN_MILLIS;
         startCountDown();
 
-        soalTerjemah4=findViewById(R.id.iv_ta4);
-        Glide.with(this).load(R.drawable.katon_apik).into(soalTerjemah4);
+        soalTerjemah5=findViewById(R.id.iv_ta5);
+        Glide.with(this).load(R.drawable.gerah_waja).into(soalTerjemah5);
 
         sr1=findViewById(R.id.r1a);
         sr1.setText(""+jawaban[0][0]);
 
-        SharedPreferences preferences= PreferenceManager.getDefaultSharedPreferences(this);
-        poin=preferences.getLong("Poin", 0 );
     }
 
     private void startCountDown(){
@@ -109,6 +108,7 @@ public class TerjemahAks5Activity extends AppCompatActivity {
         if (selectedtext.equals(jawaban[0][2])){
             countDownTimer.cancel();
             Poin.CHECKPOIN_TERJEMAH += 100;
+            Log.d("LOG",Poin.CHECKPOIN_TERJEMAH.toString());
 
             simpanPoin();
             showEndDialog();

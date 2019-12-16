@@ -12,6 +12,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RadioButton;
@@ -43,6 +44,7 @@ public class TerjemahAks4Activity extends AppCompatActivity {
     private CountDownTimer countDownTimer;
     private long timeLeftInMillis;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,9 +64,6 @@ public class TerjemahAks4Activity extends AppCompatActivity {
 
         sr1=findViewById(R.id.r1a);
         sr1.setText(""+jawaban[0][0]);
-
-        SharedPreferences preferences= PreferenceManager.getDefaultSharedPreferences(this);
-        poin=preferences.getLong("Poin", 0 );
     }
 
     private void startCountDown(){
@@ -107,7 +106,10 @@ public class TerjemahAks4Activity extends AppCompatActivity {
 
         if (selectedtext.equals(jawaban[0][0])){
             countDownTimer.cancel();
+            Intent intent=new Intent(this, TerjemahAks5Activity.class);
+            startActivity(intent);
             Poin.CHECKPOIN_TERJEMAH += 100;
+            Log.d("LOG",Poin.CHECKPOIN_TERJEMAH.toString());
 
             simpanPoin();
         }else{
@@ -128,13 +130,6 @@ public class TerjemahAks4Activity extends AppCompatActivity {
         FragmentManager fm = getSupportFragmentManager();
         AlertDialogueFragment alertDialogueFragment = AlertDialogueFragment.newInstance("Some Title");
         alertDialogueFragment.show(fm, "fragment_edit_name");
-    }
-
-    private void storePoin(){
-        SharedPreferences preferences= PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor=preferences.edit();
-        editor.putLong("Poin", poin);
-        editor.apply();
     }
 
 //    protected void onDestroy(){

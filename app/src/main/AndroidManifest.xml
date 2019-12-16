@@ -12,12 +12,24 @@
         android:roundIcon="@mipmap/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TerjemahAks5Activity"></activity>
-        <activity android:name=".TerjemahAks4Activity" />
-        <activity android:name=".TerjemahAks3Activity" />
-        <activity android:name=".Tebak5Activity" />
-        <activity android:name=".Tebak4Activity" />
-        <activity android:name=".Tebak3Activity" />
+        <activity android:name=".TerjemahAks5Activity"
+            android:label="Terjemah Aksara"
+            android:parentActivityName=".DolananActivity"></activity>
+        <activity android:name=".TerjemahAks4Activity"
+            android:label="Terjemah Aksara"
+            android:parentActivityName=".DolananActivity"/>
+        <activity android:name=".TerjemahAks3Activity"
+            android:label="Terjemah Aksara"
+            android:parentActivityName=".DolananActivity"/>
+        <activity android:name=".Tebak5Activity"
+            android:label="Tebak Aksara"
+            android:parentActivityName=".DolananActivity"/>
+        <activity android:name=".Tebak4Activity"
+            android:label="Tebak Aksara"
+            android:parentActivityName=".DolananActivity"/>
+        <activity android:name=".Tebak3Activity"
+            android:label="Tebak Aksara"
+            android:parentActivityName=".DolananActivity"/>
         <activity
             android:name=".TerjemahAks2Activity"
             android:label="Terjemah Aksara"
@@ -26,10 +38,6 @@
             android:name=".Tebak2Activity"
             android:label="Tebak Aksara"
             android:parentActivityName=".DolananActivity" />
-        <activity
-            android:name=".EditProfilActivity"
-            android:label="Edit Profil"
-            android:parentActivityName=".ProfilActivity" />
         <activity
             android:name=".ProfilActivity"
             android:label="Cek Poin"
@@ -46,12 +54,6 @@
             android:name=".AsalUrunActivity"
             android:label="Asal Urun Aksara Jawa"
             android:parentActivityName=".MenuActivity" />
-        <activity
-            android:name=".DaftarActivity"
-            android:label="Daftar" />
-        <activity
-            android:name=".MasukActivity"
-            android:label="Masuk" />
         <activity
             android:name=".DolananActivity"
             android:label="Dolanan"
